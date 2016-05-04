@@ -1,0 +1,21 @@
+Because the NLTK library may be too big to install, this file outlines how to install on the required packages of NLTK.
+
+The methods used in the programs from NLTK include:
+stopwords
+sentence_tokenizer
+word_tokenizer
+
+To only install portions of the nltk library, first open a python shell by typing "python"
+
+Then type "import nltk"
+and "nltk.download()"
+
+After that you should see options including download and list
+
+You can list the packages to see which ones you need. I believe the only necessary ones are:
+stopwords
+punkt
+
+stopwords has the stopwords list and punkt can tokenize the words/sentences.
+
+Unfortunately since all of NLTK is already installed on this machine, I can't be certain those are all you need.

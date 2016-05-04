@@ -1,0 +1,9 @@
+ID065   Sex linked traits are traits that lie on the sex chromosome. Sex influenced traits are when the sex of the organism affects the genes expressed. Sex limited traits are when traits are limited to strictly one sex.
+ID065   Conditional mutants are valuable because they can be crossed to determine more information about a specific gene or allele.
+ID065   Crossing over and recombination occurs during prophase when the homologous chromosomes exchange genetic information by swapping parts of the chromosome.
+ID038   Traits and genes that are inherited due to the sex chromosomes. Only applicable to diploid organisms.
+ID038   some mutations only appear as phenotype if the external conditions are right. These are conditional mutants.
+ID038   This is the basis of variation in population. Homologous chromosomes exchange part of their DNA leading to newer phenotypes.
+ID118   Sex-linked is traits that are on x and y chromosome. sex influences and sex limited traits are on autosomal chromosomes but are influences by sex of the organism.
+ID118   Conditional of mutant are expressed by environmental influences. example in hot area of body some protein denatures and the gene is not expressed, but cold area in body express the gene.
+ID118   It gives variation to individual genetic makeup. It occurs during prophase I of meiosis which occurs in germ cell producing sperm or egg and which is yield for reproduction of gamete.

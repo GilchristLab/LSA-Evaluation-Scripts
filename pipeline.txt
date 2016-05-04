@@ -1,0 +1,50 @@
+The pipeline is a bit different depending on what you want to accomplish
+Note that the needed independant variables that these programs generate are currently in the independentVariables.txt file, and it would probably be best to update that file to reflect any changes
+
+The directory createLSAs contains a program runCreateLSAs that pulls the relevant info the from LSAs and puts it in a file called 'output.html' It is possible for some of these programs you'll want to run that first to have the appropriate input data
+
+The grader directory contains the program to grade responses to an LSA. To run it, make sure the 'inputData.txt' file contains the questions you want analyzed. To do that, you would execute runCreateLSAs and choose the question you want analyzed and copy output.html into inputData.txt. After doing that you can run grade and it will produce each student's score in the output.txt file. In order for grader to be more accurate, you'll want to change the weights it uses for each metric. To do that you can either edit the last line of grader to have the weights you want to use, or from the python shell, import grader's main and run that with the weights you want.
+
+After running grader, you can run analyzeOutput.py and it will tell you the correlation of the scores grader produced with the final grades in the class that the students have.
+
+To find the best set of weights for a question you can run findBestWeights in the grader directory. It uses a basic machine learning algorithm to find the best set of weights for a certain question. It takes a long time to run, so running 'nohup python findBestWeights.py &' to run it in the background overnight may be the best solution.
+
+From my testing, the best weights are:
+In the form: [length, similarityToInstructor, readingLevel, capital letters used, vocab words used, conjunctive words used, reflective words used] 
+If you want the average score, meaning the total scores divided by LSAs
+
+for Explain Concept:
+	[55, 65, 0, 31, 0, 0, 0]
+
+for explain Phenomenon:
+	[25, 64, 27, 0, 0, 2, 0]
+
+for Knowledge Basis Comment:
+	[41, 65, 0, 37, 0, 0, 5]
+
+for challenging Concept comment:
+	[62, 0, 6, 28, 0, 0, 12]
+
+If you want only the total scores:
+
+for Explain Concept:
+	[0, 13, 65, 23, 0, 0, 18]
+
+for explain Phenomenon:
+	[10, 55, 65, 0, 0, 2, 1]
+
+for Knowledge Basis Comment:
+	[5, 65, 24, 0, 2, 1, 1]
+
+for challenging Concept comment:
+	[1, 2, 60, 8, 0, 0, 2]
+
+To find the self-reported average or total understanding levels of a student, go to the understanding levels director and run the respective program and it will output a dictionary in the form of ID: understandingLevel
+The same can be said for priorities similar to instructor.
+
+The number of questions answered directory contains a program that outputs the number of questions answered by a student
+
+Futhermore, the conceptTests directory contains parseConceptTests.py which outputs the number of questions the students got correct on the pre and post-test. Note, you may want to change the flags at the top of the program to get the desired output.
+
+Finally, there is a directory called weightQuestions that uses machine learning to weight the independent variables to create the greatest correlation, but this program should probably not be used as regression will be better for that tast.
+
